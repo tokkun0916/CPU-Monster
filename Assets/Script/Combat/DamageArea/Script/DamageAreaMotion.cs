@@ -69,10 +69,10 @@ namespace DamageArea
             float scale = _timer / time;
             switch (_gaugeType)
             {
-                case GaugeType.Normal:
+                case GaugeType.Circle:
                     obj.transform.localScale = new Vector3(scale, scale, scale);
                     break;
-                case GaugeType.Width:
+                case GaugeType.Rect:
                     obj.transform.localScale = new Vector3(scale, 1, 1);
                     break;
             }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace DamageArea
 {
+    /// <summary>
+    /// ダメージエリアのデータを格納するクラス
+    /// ダメージ値とサイズ、生成やゲージを溜める時間を設定する
+    /// </summary>
     [System.Serializable]
     public class DamageAreaData
     {
@@ -18,7 +22,7 @@ namespace DamageArea
     [System.Serializable]
     public enum GaugeType
     { 
-        Normal,
-        Width
+        Circle,
+        Rect
     }
 }
