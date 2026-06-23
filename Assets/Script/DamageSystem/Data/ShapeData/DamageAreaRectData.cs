@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DamageAreaRectData
+public class DamageAreaRectData : DamageAreaShapeBaseData
 {
     public Vector3 _Center;
     public Vector3 _Size;

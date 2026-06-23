@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DamageAreaCircleData
+public class DamageAreaCircleData : DamageAreaShapeBaseData
 {
     public Vector3 _Center;
     public float _Height;
