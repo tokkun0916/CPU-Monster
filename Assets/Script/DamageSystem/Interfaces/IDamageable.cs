@@ -9,5 +9,5 @@ public interface IDamageable
     /// </summary>
     /// <param name="damage">与えるダメージ量</param>
     /// <param name="source">ダメージ元のDamageArea（null許容）</param>
-    void TakeDamage(float damage, DamageArea source = null);
+    //void TakeDamage(float damage, DamageArea source = null);
 }
