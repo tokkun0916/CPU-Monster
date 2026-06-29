@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum DamageAreaState
 {
-    Spawn,
+    FadeIn,
     Attack,
     FadeOut,
     Released,

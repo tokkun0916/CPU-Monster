@@ -2,13 +2,13 @@ using DG.Tweening;
 using UnityEngine;
 using UniRx;
 
-
-public class DamageAreaCircleView : DamageAreaView
+public class DamageAreaRectView : DamageAreaView
 {
     public override void Initialize(DamageAreaRunner areaRunner)
     {
         Runner = areaRunner;
         TimeData = areaRunner.DamageAreaData.TimeData;
+        ShapeData = areaRunner.DamageAreaData.ShapeData;
 
         Runner.OnStateChanged
             .Subscribe(state =>
@@ -18,6 +18,9 @@ public class DamageAreaCircleView : DamageAreaView
                     case DamageAreaState.FadeIn:
                         {
                             transform.localScale = Vector3.zero;
+
+                            // ここに矩形のサイズを設定する処理を追加する
+
                             transform
                                 .DOScale(Vector3.one, TimeData.FadeInTime)
                                 .SetEase(Ease.OutSine);

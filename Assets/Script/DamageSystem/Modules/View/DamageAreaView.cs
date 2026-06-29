@@ -2,8 +2,9 @@ using UnityEngine;
 
 public abstract class DamageAreaView : MonoBehaviour
 {
-    protected DamageArea DamageArea;
-    protected DamageAreaTimeData DamageAreaTimeData;
+    protected DamageAreaRunner Runner;
+    protected DamageAreaTimeData TimeData;
+    protected DamageAreaShapeBaseData ShapeData;
 
-    public abstract void Initialize(DamageArea area);
+    public abstract void Initialize(DamageAreaRunner area);
 }

@@ -15,12 +15,12 @@ public class HogeUseDamageArea : MonoBehaviour
         };
 
         // UniRxのSubjectを使ってDamageAreaの状態変化を監視し、状態に応じて処理を行う
-        DamageAreaCircle damageAreaCircle = GetComponent<DamageAreaCircle>();
-        damageAreaCircle.Initialize(areaData);
+        DamageAreaRunner damageAreaRunner = GetComponent<DamageAreaRunner>();
+        damageAreaRunner.Initialize(areaData);
 
         DamageAreaCircleView circleView = GetComponent<DamageAreaCircleView>();
-        circleView.Initialize(damageAreaCircle);
+        circleView.Initialize(damageAreaRunner);
 
-        UniTask executeTask = damageAreaCircle.Run();
+        UniTask executeTask = damageAreaRunner.Run();
     }
 }
