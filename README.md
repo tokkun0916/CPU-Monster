@@ -1,4 +1,4 @@
-# CPU-Mover
+# CPU-Enemy
 
 ## 概要
 高度なCPU設計を最終目標に様々な要素を汎用化できるように作成するプロジェクト
@@ -17,7 +17,7 @@
 - ダメージエリア
 
 ## ダメージエリアの工夫した点
-・Spawner/Initializer/Runnerのライフサイクル
+・Spawner/Factory/Runnerのライフサイクル
 ・Runnerの状態をUniTaskで進め、UniRxで状態を購読し各機能へ通知するロジック
 ・GC削減
 
