@@ -6,15 +6,15 @@ using UnityEngine;
 /// </summary>
 public class DamageAreaSpwaner : MonoBehaviour
 {
-    private DamageAreaInitializer _initializer;
+    private DamageAreaFactory _factory;
 
-    public void Initilize(DamageAreaInitializer initializer)
+    public void Initialize(DamageAreaFactory initializer)
     {
-        _initializer = initializer;
+        _factory = initializer;
     }
 
-    public void SpawnDamageArea(DamageAreaData areaData)
+    public void Spawn(DamageAreaData areaData)
     {
-        _initializer.DamageAreaInitialize(areaData);
+        _factory.Create(areaData);
     }
 }

@@ -10,16 +10,16 @@ public class HogeDamageAreaInstantiate : MonoBehaviour
     [SerializeField] GameObject _prefabCircle;
     [SerializeField] GameObject _prefabRect;
 
-    public DamageAreaRunner Instantiate(DamageAreaShapeBaseData data)
+    public GameObject Instantiate(DamageAreaShapeBaseData data)
     {
-        DamageAreaRunner runner;
+        GameObject runner;
         return data switch
         {
             DamageAreaCircleData => runner
-            = Instantiate(_prefabCircle).GetComponent<DamageAreaRunner>(),
+            = Instantiate(_prefabCircle),
 
             DamageAreaRectData => runner
-            = Instantiate(_prefabRect).GetComponent<DamageAreaRunner>(),
+            = Instantiate(_prefabRect),
 
             _ => throw new NotSupportedException()
         };

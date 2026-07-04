@@ -5,10 +5,13 @@ using UniRx;
 
 public class DamageAreaCircleScaleMotion : DamageAreaScaleMotion
 {
+    private DamageAreaCircleData _circleData;
+
     public override void Initialize(DamageAreaRunner areaRunner)
     {
         Runner = areaRunner;
         TimeData = areaRunner.DamageAreaData.TimeData;
+        _circleData = (DamageAreaCircleData)areaRunner.DamageAreaData.ShapeData;
 
         Runner.OnStateChanged
             .Subscribe(state =>
@@ -17,9 +20,11 @@ public class DamageAreaCircleScaleMotion : DamageAreaScaleMotion
                 {
                     case DamageAreaState.Spawn:
                         {
+                            transform.localPosition = _circleData.CenterPosition;
+
                             transform.localScale = Vector3.zero;
                             transform
-                                .DOScale(Vector3.one, TimeData.SpawnTime)
+                                .DOScale(Vector3.one * _circleData.Radius, TimeData.SpawnTime)
                                 .SetEase(Ease.OutSine);
                         }
                         break;

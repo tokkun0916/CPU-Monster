@@ -5,6 +5,7 @@ using UniRx;
 public class DamageAreaRectScaleMotion : DamageAreaScaleMotion
 {
     private DamageAreaRectData _rectData;
+
     public override void Initialize(DamageAreaRunner areaRunner)
     {
         Runner = areaRunner;
@@ -18,7 +19,7 @@ public class DamageAreaRectScaleMotion : DamageAreaScaleMotion
                 {
                     case DamageAreaState.Spawn:
                         {
-                            transform.localPosition = _rectData.StartingPos;
+                            transform.localPosition = _rectData.FrontCenterPos;
 
                             transform.localScale = new Vector3(0, _rectData.Size.y, _rectData.Size.z);
                             transform
