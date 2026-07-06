@@ -22,9 +22,9 @@ public class DamageAreaCircleScaleMotion : DamageAreaScaleMotion
         _circleData = (DamageAreaCircleData)areaData.ShapeData;
     }
 
-    private void OnStateChanged(DamageAreaStateChanged state)
+    private void OnStateChanged(DamageAreaStateChanged changedData)
     {
-        switch (state.State)
+        switch (changedData.State)
         {
             case DamageAreaState.Spawn:
                 {

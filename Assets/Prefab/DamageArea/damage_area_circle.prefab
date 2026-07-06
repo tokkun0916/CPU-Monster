@@ -99,9 +99,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4569459685264089939}
+  - component: {fileID: -7866199679854840971}
   - component: {fileID: 2505620389698307599}
   - component: {fileID: 7291948942889221091}
-  - component: {fileID: 1095889944943885704}
   m_Layer: 0
   m_Name: damage_area_circle
   m_TagString: Untagged
@@ -126,6 +126,18 @@ Transform:
   - {fileID: 4292046430170626691}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7866199679854840971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803497061121270270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f3ba3612c1a4248a488fb261550385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageAreaRoot
 --- !u!114 &2505620389698307599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,18 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708023e0d18c12d4e8a4cfa89ff4091a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageAreaCircleScaleMotion
---- !u!114 &1095889944943885704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803497061121270270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b0cdbf87e064e4da17c27f221a9a26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HogeDamageAreaDestory
 --- !u!1 &6974298969821588010
 GameObject:
   m_ObjectHideFlags: 0

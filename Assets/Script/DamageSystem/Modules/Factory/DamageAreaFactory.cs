@@ -21,16 +21,10 @@ public class DamageAreaFactory : MonoBehaviour
     public void Create(DamageAreaData areaData)
     {
         // Instantiateしているが、将来的にはオブジェクトプールから取得する
-        GameObject damageArea = _hogeDamageAreaInstantiate.Instantiate(areaData.ShapeData);
+        DamageAreaRoot damageAreaRoot = _hogeDamageAreaInstantiate.Instantiate(areaData.ShapeData);
 
-        // ダメージエリアのライフサイクルをステイト管理するクラスを初期化する
-        DamageAreaRunner runner = damageArea.GetComponent<DamageAreaRunner>();
-        runner.Initialize(areaData);
-
-        // ダメージエリアの各機能を初期化＋ステイトを監視する
-        DamageAreaScaleMotion motion = damageArea.GetComponent<DamageAreaScaleMotion>();
-        motion.Initialize(areaData);
-
-        _ = runner.Run();
+        // ダメージエリアの各機能を初期化して実行する
+        damageAreaRoot.Initialize(areaData);
+        damageAreaRoot.Run();
     }
 }

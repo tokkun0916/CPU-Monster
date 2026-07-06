@@ -189,9 +189,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1606441301293174456}
-  - component: {fileID: 7006671994649323411}
+  - component: {fileID: 5159444437718534697}
   - component: {fileID: 3281514410128929215}
-  - component: {fileID: 1184031336230635093}
+  - component: {fileID: 7006671994649323411}
   m_Layer: 0
   m_Name: Rect_Center_DamageArea
   m_TagString: Untagged
@@ -216,7 +216,7 @@ Transform:
   - {fileID: 1803364437791400135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7006671994649323411
+--- !u!114 &5159444437718534697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6837151858872651741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8829c10669cd9384b9f4cda78893be5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 91f3ba3612c1a4248a488fb261550385, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageAreaRectView
+  m_EditorClassIdentifier: Assembly-CSharp::DamageAreaRoot
 --- !u!114 &3281514410128929215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14e27c5dc80c424f9cf7a245bd875df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageAreaRunner
---- !u!114 &1184031336230635093
+--- !u!114 &7006671994649323411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,6 +249,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6837151858872651741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b0cdbf87e064e4da17c27f221a9a26, type: 3}
+  m_Script: {fileID: 11500000, guid: 8829c10669cd9384b9f4cda78893be5b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HogeDamageAreaDestory
+  m_EditorClassIdentifier: Assembly-CSharp::DamageAreaRectView
