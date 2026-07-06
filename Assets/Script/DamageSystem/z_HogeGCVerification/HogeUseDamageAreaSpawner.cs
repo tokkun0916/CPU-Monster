@@ -15,7 +15,38 @@ public class HogeUseDamageAreaSpawner : MonoBehaviour
 
     private int _spawnType = 1;
 
+    // いずれはScriptableObject化して外部から設定できるようにする
     private DamageAreaData _damageAreaData;
+    private DamageAreaData _damageAreaDataTyep1 = new
+        DamageAreaData(
+            new DamageAreaRectData(
+                frontCenterPos: Vector3.zero,
+                size: Vector3.one
+            ),
+            new DamageAreaAttackData(),
+            new DamageAreaTimeData(
+                spawnTime: 1f,
+                attackWaitTime: 1f,
+                attackTime: 1f,
+                fadeOutTime: 1f
+            )
+        );
+    private DamageAreaData _damageAreaDataType2 = new
+        DamageAreaData(
+            new DamageAreaCircleData(
+                centerPosition: Vector3.zero,
+                height: 1f,
+                radius: 1f,
+                angle: 360f
+            ),
+            new DamageAreaAttackData(),
+            new DamageAreaTimeData(
+                spawnTime: 1f,
+                attackWaitTime: 1f,
+                attackTime: 1f,
+                fadeOutTime: 1f
+            )
+        );
 
     void Update()
     {
@@ -52,35 +83,10 @@ public class HogeUseDamageAreaSpawner : MonoBehaviour
         switch (_spawnType)
         {
             case -1:
-                return new DamageAreaData(
-                    new DamageAreaRectData(
-                        frontCenterPos: Vector3.zero,
-                        size:           Vector3.one
-                    ),
-                    new DamageAreaAttackData(),
-                    new DamageAreaTimeData(
-                        spawnTime:      1f,
-                        attackWaitTime: 1f,
-                        attackTime:     1f,
-                        fadeOutTime:    1f
-                    )
-                );
+                return _damageAreaDataTyep1;
             case 1:
-                return new DamageAreaData(
-                    new DamageAreaCircleData(
-                        centerPosition: Vector3.zero,
-                        height: 1f,
-                        radius: 1f,
-                        angle:  360f
-                    ),
-                    new DamageAreaAttackData(),
-                    new DamageAreaTimeData(
-                        spawnTime:       1f,
-                        attackWaitTime:  1f,
-                        attackTime:      1f,
-                        fadeOutTime:     1f
-                    )
-                );
+                return _damageAreaDataType2;
+
             default:
                 throw new System.Exception("Invalid spawn type for damage area.");
         }
