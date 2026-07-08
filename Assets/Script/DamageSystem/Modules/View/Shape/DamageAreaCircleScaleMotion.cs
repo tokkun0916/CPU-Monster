@@ -28,17 +28,18 @@ public class DamageAreaCircleScaleMotion : DamageAreaScaleMotion
         {
             case DamageAreaState.Spawn:
                 {
+                    // 指定された位置に配置し、スケールを0にしてからアニメーションで拡大する
                     transform.localPosition = _circleData.CenterPosition;
                     transform.localScale = Vector3.zero;
                     transform
-                        .DOScale(Vector3.one * _circleData.Radius, TimeData.SpawnTime)
+                        .DOScale(_circleData.Radius, TimeData.SpawnTime)
                         .SetEase(Ease.OutSine);
                 }
                 break;
             case DamageAreaState.FadeOut:
                 {
                     transform
-                        .DOScale(Vector3.zero, TimeData.FadeOutTime)
+                        .DOScale(0f, TimeData.FadeOutTime)
                         .SetEase(Ease.OutSine);
                 }
                 break;

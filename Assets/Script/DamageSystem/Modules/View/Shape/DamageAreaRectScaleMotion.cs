@@ -27,6 +27,7 @@ public class DamageAreaRectScaleMotion : DamageAreaScaleMotion
         {
             case DamageAreaState.Spawn:
                 {
+                    // 指定された位置に配置し、X軸方向のスケールを0にしてからアニメーションで拡大する
                     transform.localPosition = _rectData.FrontCenterPos;
                     transform.localScale = new Vector3(
                         0,
