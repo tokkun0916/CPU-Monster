@@ -17,7 +17,7 @@ public class HogeUseDamageAreaSpawner : MonoBehaviour
 
     // いずれはScriptableObject化して外部から設定できるようにする
     private DamageAreaData _damageAreaData;
-    private DamageAreaData _damageAreaDataTyep1 = new
+    private DamageAreaData _damageAreaDataTyepRect = new
         DamageAreaData(
             new DamageAreaRectData(
                 frontCenterPos: Vector3.zero,
@@ -31,7 +31,7 @@ public class HogeUseDamageAreaSpawner : MonoBehaviour
                 fadeOutTime: 1f
             )
         );
-    private DamageAreaData _damageAreaDataType2 = new
+    private DamageAreaData _damageAreaDataTypeCircle = new
         DamageAreaData(
             new DamageAreaCircleData(
                 centerPosition: Vector3.zero,
@@ -86,9 +86,9 @@ public class HogeUseDamageAreaSpawner : MonoBehaviour
         switch (_spawnType)
         {
             case -1:
-                return _damageAreaDataTyep1;
+                return _damageAreaDataTyepRect;
             case 1:
-                return _damageAreaDataType2;
+                return _damageAreaDataTypeCircle;
 
             default:
                 throw new System.Exception("Invalid spawn type for damage area.");
